@@ -24,7 +24,6 @@ class Manifold40(Dataset):
         obj_path = os.path.join(self.obj_dir,self.mesh_index.file[idx])
         label = self.mesh_index.label[idx]
         verts, faces, aus = load_obj(obj_path)
-        #mesh = load_objs_as_meshes([obj_path], load_textures=False)
         mesh  = {'verts': verts, 'faces': faces.verts_idx, 'label': label}
         return mesh
 
@@ -54,6 +53,5 @@ class Manifold40_fs(Dataset):
         obj_path = os.path.join(self.obj_dir,self.mesh_index.file[idx])
         label = self.mesh_index.label[idx]
         verts, faces, aus = load_obj(obj_path)
-        #mesh = load_objs_as_meshes([obj_path], load_textures=False)
         mesh  = {'verts': verts, 'faces': faces.verts_idx, 'label': label}
         return mesh
