@@ -1,0 +1,23 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Transform: Rotate">
+  <Param enum_val1="Y axis" enum_val3="custom axis" name="rotAxis" tooltip="Choose a method" type="RichEnum" enum_cardinality="4" description="Rotation on:" enum_val0="X axis" enum_val2="Z axis" value="0" isxmlparam="0"/>
+  <Param enum_val1="barycenter" name="rotCenter" tooltip="Choose a method" type="RichEnum" enum_cardinality="3" description="Center of rotation:" enum_val0="origin" enum_val2="custom point" value="1" isxmlparam="0"/>
+  <Param name="angle" tooltip="Angle of rotation (in &lt;b>degree&lt;/b>). If snapping is enabled this value is rounded according to the snap value" type="RichDynamicFloat" min="-360" description="Rotation Angle" value="270" isxmlparam="0" max="360"/>
+  <Param name="customAxis" tooltip="This rotation axis is used only if the 'custom axis' option is chosen." type="RichPoint3f" description="Custom axis" y="0" z="0" isxmlparam="0" x="0"/>
+  <Param name="customCenter" tooltip="This rotation center is used only if the 'custom point' option is chosen." type="RichPoint3f" description="Custom center" y="0" z="0" isxmlparam="0" x="0"/>
+  <Param name="snapFlag" tooltip="If selected, before starting the filter will remove any unreferenced vertex (for which curvature values are not defined)" type="RichBool" description="Snap angle" value="false" isxmlparam="0"/>
+  <Param name="snapAngle" tooltip="This value is used to snap the rotation angle (i.e. if the snapping value is 30, 227 becomes 210)." type="RichFloat" description="Snapping Value" value="30" isxmlparam="0"/>
+  <Param name="Freeze" tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" type="RichBool" description="Freeze Matrix" value="true" isxmlparam="0"/>
+  <Param name="allLayers" tooltip="If selected the filter will be applied to all visible mesh layers" type="RichBool" description="Apply to all visible Layers" value="false" isxmlparam="0"/>
+ </filter>
+ <filter name="Transform: Translate, Center, set Origin">
+  <Param enum_val1="Center on Scene BBox" enum_val3="Set new Origin" name="traslMethod" tooltip="[XYZ translation] adds X,Y and Z offset to Layer transformation, [Center on BBox] moves Layer Origin to the Bounding Box center, [Set new Origin] moves Layer Origin to a specific point" type="RichEnum" enum_cardinality="4" description="Transformation:" enum_val0="XYZ translation" enum_val2="Center on Layer BBox" value="1" isxmlparam="0"/>
+  <Param name="axisX" tooltip="when using [XYZ translation], amount of translation along the X axis (in model units)" type="RichDynamicFloat" min="-12080.6" description="X Axis" value="0" isxmlparam="0" max="12080.6"/>
+  <Param name="axisY" tooltip="when using [XYZ translation], amount of translation along the Y axis (in model units)" type="RichDynamicFloat" min="-12080.6" description="Y Axis" value="0" isxmlparam="0" max="12080.6"/>
+  <Param name="axisZ" tooltip="when using [XYZ translation], amount of translation along the Z axis (in model units)" type="RichDynamicFloat" min="-12080.6" description="Z Axis" value="0" isxmlparam="0" max="12080.6"/>
+  <Param name="newOrigin" tooltip="when using [Set new Origin], this is the location of the new Origin." type="RichPoint3f" description="New Origin:" y="0" z="0" isxmlparam="0" x="0"/>
+  <Param name="Freeze" tooltip="The transformation is explicitly applied, and the vertex coordinates are actually changed" type="RichBool" description="Freeze Matrix" value="true" isxmlparam="0"/>
+  <Param name="allLayers" tooltip="If selected the filter will be applied to all visible mesh layers" type="RichBool" description="Apply to all visible Layers" value="false" isxmlparam="0"/>
+ </filter>
+</FilterScript>
