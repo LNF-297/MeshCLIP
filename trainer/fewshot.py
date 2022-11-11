@@ -235,7 +235,7 @@ def check(rez, label):
     cnt = np.sum(cmp.cpu().numpy())
     return cnt
 
-def fewshot2(args):
+def fewshot(args):
     # create exp directory
     if not os.path.exists(os.path.join('.', 'exp')):
         os.mkdir(os.path.join('.', 'exp'))
