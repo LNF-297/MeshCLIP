@@ -1,10 +1,8 @@
 import os
 import pandas as pd
-import torch
 from torch.utils.data import Dataset
-from pytorch3d.io import load_obj, load_objs_as_meshes
+from pytorch3d.io import load_obj
 import random
-from pytorch3d.structures import meshes
 def get_classnames(PATH):
     classnames = []
     with open(os.path.join(PATH, 'classnames.txt'), 'r') as f:
