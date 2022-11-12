@@ -53,7 +53,7 @@ class projection(nn.Module):
              [2, 0, 2], [2, 0, -2], [-2, 0, -2], [-2, 0, 2]
              ]).repeat(batch_size, 1)
         self.lights = PointLights(device=self.args.device, location=lights)
-        R, T = look_at_view_transform(dist=2.7, elev=elev, azim=azim)
+        R, T = look_at_view_transform(dist=1.7, elev=elev, azim=azim)
         self.cameras = FoVPerspectiveCameras(device=self.args.device, R=R, T=T)
         raster_settings = RasterizationSettings(
             image_size=self.args.resolution,
