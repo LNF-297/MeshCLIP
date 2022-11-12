@@ -1,6 +1,6 @@
 # MeshCLIP: Efficient and Robust  3D Mesh Understanding with Zero/Few-shot Approach
 
-Official implementation of "MeshCLIP: Efficient and Robust 3D Mesh Understanding with End-to-End Approach".
+Official implementation of "MeshCLIP: Efficient and Robust  3D Mesh Understanding with Zero/Few-shot Approach".
 
 
 ## Requirements
@@ -12,7 +12,8 @@ cuda: >=11.6
 pytorch: >=1.11.0
 
 python: >=3.7 
-pytorch3d: >=[Version 0.7.0](https://github.com/facebookresearch/pytorch3d/releases/tag/v0.7.0)
+
+pytorch3d: >=[0.7.0](https://github.com/facebookresearch/pytorch3d/releases/tag/v0.7.0)
 
 ### Installation
 
