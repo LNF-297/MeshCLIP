@@ -23,9 +23,9 @@ import numpy as np
 
 TEMPLATES = {
     'Manifold40': 'a picture of a {}',
-    'ModelNet40': 'a picture of a {}.',
-    '3D-FUTURE_sub': 'a picture of a {}.',
-    '3D-FUTURE_super': 'a picture of a {}.'
+    'ModelNet40': 'a picture of a {}',
+    '3D-FUTURE_sub': 'a picture of a {}',
+    '3D-FUTURE_super': 'a picture of a {}'
 
 }
 
@@ -48,7 +48,7 @@ class Textual_Encoder(nn.Module):
 
     def forward(self):
         template = TEMPLATES[self.args.dataset_name]
-        prompts = [template.format(classname.replace('_',' ')) for classname in self.classnames]
+        prompts = [template.format(classname.replace('_', ' ')) for classname in self.classnames]
         prompts = torch.cat([clip.tokenize(prompt) for prompt in prompts]).to(self.args.device)
         text_features = self.clip_model.encode_text(prompts)
         return text_features
