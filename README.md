@@ -84,7 +84,7 @@ pip install -r requirements.txt
 #### ModelNet40
 
 ```bash
-python main_cls.py --trainer zeroshot --dataset_name Modelnet40 --dataset_path ./data/Modelnet40_Processed --mesh_views=10
+python main_cls.py --trainer zeroshot --dataset_name ModelNet40 --dataset_path ./data/ModelNet40_Processed --mesh_views=10
 ```
 
 #### Manifold40
@@ -110,7 +110,7 @@ python main_cls.py --trainer zeroshot --dataset_name 3D-FUTURE_super --dataset_p
 #### ModelNet40
 
 ```bash
-python main_cls.py --trainer fewshot --dataset_name Modelnet40 --dataset_path ./data/Modelnet40_Processed --mesh_views=14
+python main_cls.py --trainer fewshot --dataset_name ModelNet40 --dataset_path ./data/ModelNet40_Processed --mesh_views=14
 ```
 
 #### Manifold40
